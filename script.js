@@ -19,6 +19,19 @@ function generatePassword() {
   }
 
   alert("Your password will have " + confirmLength + " characters!");
+
+  var confirmUpper = confirm("Press OK if you would like to include uppercase letters");
+  var confirmLower = confirm("Press OK if you would like to include lowercase letters");
+  var confirmSpecial = confirm("Press OK if you would like to include special characters");
+  var confirmNumber = confirm("Press OK if you would like to include numbers");
+
+  while(confirmLower === false && confirmUpper === false && confirmSpecial === false && confirmNumber === false) {
+    alert("You must choose to include at least one character choice!");
+    var confirmUpper = confirm("Press OK if you would like to include uppercase letters");
+    var confirmLower = confirm("Press OK if you would like to include lowercase letters");
+    var confirmSpecial = confirm("Press OK if you would like to include special characters");
+    var confirmNumber = confirm("Press OK if you would like to include numbers");
+} 
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
