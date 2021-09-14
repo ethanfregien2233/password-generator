@@ -11,11 +11,14 @@ var confirmNumber;
 var confirmLength = "";
 
 function generatePassword() {
-  var confirmLength=(prompt("How many characters should your password contain? Please pick between 8 and 128 characters."));
+  var confirmLength=(prompt("How many characters will your password contain? Please pick between 8 and 128 characters."));
 
   while(confirmLength >= 129 || confirmLength <=7) {
     alert("Password must be between 8-128 characters! Please try again.");
+    var confirmLength=(prompt("How many characters will your password contain? Please pick between 8 and 128 characters."));
   }
+
+  alert("Your password will have " + confirmLength + " characters!");
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
